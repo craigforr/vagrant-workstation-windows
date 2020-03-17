@@ -9,9 +9,9 @@ Vagrant.configure("2") do |config|
 
   # Development Workstation -----------------------------------------
   config.vm.define "workstation", primary: true do |workstation|
-    # Ubuntu 18.04.2 LTS (Bionic Beaver)
-    # https://app.vagrantup.com/ubuntu/boxes/bionic64
-    # http://cloud-images.ubuntu.com/bionic/
+    # Windows 10
+    # https://app.vagrantup.com/jacqinthebox/boxes/windows10
+    # https://github.com/jacqinthebox/packer-templates
     workstation.vm.box = "jacqinthebox/windows10"
     workstation.vm.hostname = hostname
     workstation.vm.network :private_network, ip: "192.168.56.51"
